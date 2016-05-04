@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Voting from './components/Voting';
+import Voting from './components/Voting.jsx';
 
 const pair = ['Trainspotting', '28 Days Later'];
 

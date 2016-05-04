@@ -2,22 +2,23 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    './src/index.js',
     'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server'
+    'webpack/hot/only-dev-server',
+    './src/index.jsx',
+    './src/style.css'
   ],
-  module:{
-    loaders:[{
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'react-hot!babel'
+  module: {
+    loaders: [{
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loader: 'react-hot!babel'
     },{
       test: /\.css$/,
       loader: 'style!css!autoprefixer?browsers=last 2 versions'
-    }]  
+    }]
   },
   resolve: {
-    extenstions: ['','.js','.jsx']  
+    extensions: ['', '.js', '.jsx']
   },
   output: {
     path: __dirname + '/dist',
@@ -26,7 +27,7 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist',
-    hot:true
+    hot: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
