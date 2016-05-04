@@ -7,12 +7,14 @@ class Voting extends React.Component {
         this.getPair = this.getPair.bind(this);
     }
     getPair() {
-        return this.props.pair || [];
+        console.log(this.props, this.state)
+        return this.state.pair || [];
     }
     render() {
+        var entries = this.getPair()
         return <div className='voting'>
-            {this.getPair().map((entry, key) => <button>
-                <h1> {entry}</h1>
+            {entries.map((entry) => <button key={entry._id}>
+                <h1 >{entry.film}</h1>
                 </button>)}
         </div>
     }
