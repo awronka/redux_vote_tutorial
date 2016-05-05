@@ -6,8 +6,16 @@ const pair = [
     'Trainspotting',
     '28 Days Later'
     ];
-
+let voteWith;
+const voteFunc = (entry) => {
+    voteWith = entry
+    console.log(voteWith)
+     return 
+};
 ReactDom.render(
-    <Voting pair={pair} />,
+    <Voting pair={pair} 
+            hasVoted={voteWith} 
+            vote={voteFunc}
+            />,
     document.getElementById('app')
 );
