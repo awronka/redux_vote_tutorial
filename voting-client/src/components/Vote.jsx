@@ -1,4 +1,6 @@
 import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+
 
 class Vote extends React.Component {
         constructor(props){
@@ -6,6 +8,8 @@ class Vote extends React.Component {
         this.getPair = this.getPair.bind(this);
         this.isDisabled = this.isDisabled.bind(this);
         this.hasVotedFor = this.hasVotedFor.bind(this);
+        this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+
     }
     getPair() {
         console.log(this.props)
