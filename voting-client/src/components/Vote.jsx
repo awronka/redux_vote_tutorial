@@ -12,7 +12,6 @@ class Vote extends React.Component {
 
     }
     getPair() {
-        console.log(this.props)
         return this.props.pair || [];
     }
     isDisabled(){
