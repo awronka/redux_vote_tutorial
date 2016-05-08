@@ -1,14 +1,11 @@
 import makeStore from './src/store';
 import {startServer} from './src/server';
-import entries from './entries.json'
 
 export const store = makeStore();
-
 startServer(store);
 
 store.dispatch({
-    type: 'SET_ENTRIES',
-    entries: require('./entries.json')
+  type: 'SET_ENTRIES',
+  entries: require('./entries.json')
 });
-
-store.dispatch({type: 'NEXT'})
+store.dispatch({type: 'NEXT'});
