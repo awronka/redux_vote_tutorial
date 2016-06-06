@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import Voting from './components/Voting.jsx';
+import {ChatContainer} from './components/Chat.jsx';
 import {Router,Route,hashHistory} from 'react-router';
 import App from './components/App';
 import {ResultsContainer} from './components/Results';
@@ -22,6 +23,7 @@ const store = createStoreWithMiddleware(reducer);
 
 const routes = <Route component={App}>
     <Route path="/results" component={ResultsContainer}/>
+    <Route path="/chat" component={ChatContainer}/>
     <Route path="/" component={VotingContainer}/>
 </Route>;
 

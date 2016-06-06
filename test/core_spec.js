@@ -6,7 +6,7 @@ import {setEntries, next, vote} from '../src/core';
 describe('application logic', () => {
 	describe('set Entries', () => {
 
-		it('converst to immutable', () => {
+		it('converts to immutable', () => {
 			const state = Map();
 			const entries = ['Trainspotting', '28 Days Later'];
 			const nextState = setEntries(state, entries);
