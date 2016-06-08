@@ -11,13 +11,14 @@ export class Chat extends React.Component {
     }
     
     render(){
-        return <div >{this.props.pair}</div>;
+        return <div >{this.props.messages}</div>;
     }
 }
 
 function mapStateToProps(state){
+    console.log(state)
     return{
-        pair: state.getIn(['vote', 'pair'])
+        messages: state.get('messages')
     }
 }
 

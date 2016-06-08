@@ -72,3 +72,10 @@ export function vote(voteState, entry, voter) {
     voter
   );
 }
+
+export function getMessages(state, oldMessages){
+  const list = List(oldMessages)
+  const newstate =state.set('messages', list);
+    console.log(newstate)
+    return newstate
+}

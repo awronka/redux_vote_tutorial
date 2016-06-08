@@ -19,3 +19,10 @@ export function next() {
     type: 'NEXT'
   };
 }
+
+export function chat(){
+  return {
+    type: 'CHAT',
+    message
+  };
+}
